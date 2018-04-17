@@ -1,0 +1,649 @@
+body {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(80, 83, 89);
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* Header */
+header {
+  display: flex;
+  height: 64px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  z-index: 1;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgb(80, 83, 89);
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+
+header .logo {
+  padding-left: 24px;
+  padding-top: 20px;
+}
+
+nav {
+  text-align: right;
+  flex-grow: 1;
+  padding-right: 30px;
+  margin-top: 10px;
+}
+
+nav span a {
+  color: rgb(80, 83, 89);
+  text-decoration: none;
+  margin-left: 10px;
+  text-align: center;
+}
+
+nav span {
+  text-align: center;
+}
+
+nav span:hover {
+  background-color: rgb(156, 184, 229);
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+
+header .colmar {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 15px;
+}
+
+header .academy {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 15px;
+}
+
+header ul {
+  display: none;
+}
+
+@media only screen and (max-width: 750px){
+	
+	header .colmar, header .academy  {
+    display: none;
+  }
+  
+  header nav, header .logo {
+    display: none;
+  }
+  
+  header ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 15px;
+  }
+}
+/* Big Box 1 */
+
+.box {
+  display: flex;
+  height: 450px;
+  width: 960px;
+  min-width: 850px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(67, 69, 71);
+
+}
+
+.box.one {
+  flex-direction: row;
+  background-color: rgb(170, 172, 175);
+  padding-top: 64px;
+  min-width: 850px;
+}
+
+.box.one .picture {
+  display: flex;
+  height: 450px;
+  width: 592px;
+  border: 24px;
+}
+
+.box.one .picture img {
+  height: 402px;
+  width: auto;
+  padding: 24px;
+}
+
+.box.one .learn {
+  text-align: left;
+}
+
+.learn h2 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 24px;
+  width: 350px;
+}
+
+.button {
+  display: flex;
+  background-color: rgb(80, 83, 89);
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 240px;
+  margin-top: 24px;
+}
+
+.button:hover {
+  background-color: rgb(156, 184, 229);
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 750px){
+	
+	.box {
+    min-width: 500px;
+    border: 1px solid rgba(67, 69, 71, 0.2)
+  }
+  
+  .box.one {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  
+  .box.one .picture {
+    width: 100%;
+    height: auto;
+  }
+
+  .box.one .picture img {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .box.one .learn {
+    padding-top: 32px;
+  }
+  
+  .box.one .learn .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px 32px 55px;
+  }
+  
+  .box.one .learn .button:hover {
+    background-color: rgb(156, 184, 229);
+    transition-property: background-color;
+    transition-duration: 1s;
+  }
+  
+}
+
+/* Big Box 2 */
+
+.box.two {
+  flex-direction: row;
+  padding-bottom: 10px;
+  height: 470px;
+}
+
+.box.two .leftpanel {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+}
+
+.box.two .rightpanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftpanel img {
+  height: 300px;
+  width: auto;
+  padding: 32px 24px 24px 24px; ;
+}
+
+.leftpanel h2 {
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 24px;
+  padding-bottom: 12px;
+}
+
+.leftpanel h5 {
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+.leftpanel h6 {
+  padding: 20px;
+  font-size: 12px;
+}
+
+.rightpanel {
+  width: 40%;
+  height: 100%;
+  padding-top: 15px;
+}
+
+.smallpanel {
+  display: flex;
+  width: 370px;
+  height: 140px;
+  flex-direction: row;
+  border: 0.1px solid rgb(170, 172, 175);
+  justify-content: center;
+  margin: 2px;
+}
+
+.panelpicture {
+  display: flex;
+  width: 35%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobilepanelpicture {
+  display: none;
+}
+
+.smallpanel img {
+  display: flex;
+  height: auto;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.smallpanel:hover {
+  background-color: rgb(156, 184, 229);
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+
+.smallpanel.top {
+  margin-top: 15px;
+}
+
+.panelinfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.panelinfo h3 {
+  font-weight: bold;
+  padding: 8px 0px;
+
+}
+
+.panelinfo h5 {
+  padding: 8px 0px;
+  font-size: 12px;
+}
+
+.panelinfo h5 a {
+  text-decoration: none;
+  color: rgb(86, 145, 239);
+}
+
+.smallpanel.bottom {
+  background-color: rgb(170, 172, 175);
+}
+
+@media only screen and (max-width: 750px){
+	
+	.box.two {
+    height: auto;
+  }
+  
+  .box.two .leftpanel {
+    display: none;
+  }
+  
+  .panelpicture {
+    display: none;
+  }
+  
+  .mobilepanelpicture {
+    display: flex;
+    justify-content: center;
+    width: 384px;
+    height: 163px;
+  }
+  
+  .box.two .smallpanel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border: 0px;
+    padding-bottom: 32px;
+  }
+  
+  .box.two .smallpanel.top {
+    padding-top: 16px;
+  }
+  
+  .box.two .panelinfo {
+    padding-left: 24px;
+  }
+  
+  .box.two .panelinfo h5 a {
+    text-decoration: none;
+    color: rgb(86, 145, 239);
+  }
+  
+}
+
+/* Box 3 */
+
+.box.three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(170, 172, 175);
+  height: auto;
+  padding: 32px 0px 48px 0px;
+}
+
+.box.three .practice {
+  text-align: center;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.box.three .practice h2 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.panelbox {
+  display: flex;
+  height: 432px;
+  width: 650px;
+  flex-wrap: wrap;
+
+}
+
+.coursepanel {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 175px;
+  margin: 16px;
+  background-color: white;
+
+}
+
+.coursepanel:hover {
+  background-color: rgb(156, 184, 229);
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+
+.coursepanel .top {
+  display: flex;
+  height: 40%;
+  width: auto;
+}
+
+.coursepanel .top img {
+  height: auto;
+  width: 100%
+
+}
+
+.coursepanel .bottom {
+  margin: 16px;
+  text-align: left;
+  height: 60%;
+}
+
+.coursepanel .bottom h3 {
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+.coursepanel .bottom h4 {
+  font-size: 12px;
+  padding-top: 8px;
+  opacity: 0.9;
+}
+
+@media only screen and (max-width: 750px){
+	
+	.box.three {
+    height: auto;
+    background-color: white;
+  }
+  
+  .box.three .panelbox {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  
+  .box.three .panelbox .coursepanel {
+    height: 50px;
+    width: 300px;
+    margin: 8px;
+    background-color: rgb(170, 172, 175);
+    text-align: center;
+  }
+  
+  .box.three .panelbox .coursepanel:hover {
+    background-color: rgb(156, 184, 229);
+  }
+  
+  .box.three .panelbox .coursepanel:active {
+    background-color: black;
+  }
+  
+  .box.three .panelbox .coursepanel h3 {
+    text-align: center;
+  }
+  
+  .box.three .coursepanel .top {
+    display: none;
+  }
+  
+  .box.three .coursepanel .bottom h4 {
+    display: none;
+  }
+}
+
+/* Box 4 */
+
+.box.four {
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+}
+
+.box.four .practice {
+  width: 100%;
+  height: 20px;
+  padding: 32px;
+}
+
+.box.four .practice h2 {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.box.four .practice .mobilepractice {
+  display: none;
+}
+
+.box.four .main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+
+.main .leftpanel {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 0px 24px 32px 24px;
+}
+
+.main .leftpanel .video {
+  width: 100%;
+  height: auto;
+}
+
+.main .leftpanel .video video {
+  width: 100%;
+  height: auto;
+}
+
+.main .leftpanel .text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 24px;
+}
+
+.main .leftpanel .text h3 {
+  font-weight: bold;
+  padding-bottom: 8px;
+
+}
+
+.main .leftpanel .text h4 {
+  font-size: 12px;
+}
+
+.main .rightpanel {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.main .rightpanel .toptoo {
+  background-color: rgb(170, 172, 175);
+}
+
+.main .rightpanel .smallpanel {
+  width: 360px;
+  margin-right: 5px;
+}
+
+.smallpanel .bottomtoo {
+  border: hidden;
+}
+
+@media only screen and (max-width: 750px){
+	
+	.box.four {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  
+  .box.four .rightpanel {
+    display: none;
+  }
+  
+  .box.four .leftpanel {
+    width: 100%;
+  }
+  
+  .box.four .leftpanel .video {
+    width: 100%;
+    height: auto;
+    padding-bottom: 24px;
+  }
+  
+  .box.four .leftpanel .text {
+    display: none;
+  }
+  
+  .box.four .practice h2 {
+    display: none;
+  }
+  
+  .box.four .practice .mobilepractice {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    height: 20px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  border: 1px solid rgb(170, 172, 175);
+}
+
+footer .copyright {
+  text-align: left;
+  padding-left: 24px;
+  padding-top: 16px;
+  font-size: 12px;
+}
+
+footer .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: right;
+  padding-right: 24px;
+  padding-top: 16px;
+  font-size: 12px;
+}
+
+footer .links h5 a {
+  padding-left: 5px;
+  text-decoration: none;
+  color: rgb(80, 83, 89);
+}
+
+@media only screen and (max-width: 750px){
+	footer .links h5 a {
+    display: none;
+  }
+}
+
